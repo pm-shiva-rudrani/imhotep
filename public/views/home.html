@@ -1,0 +1,196 @@
+<div id="wrapper">
+
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><small>Welcome David Ho !</small></h1>
+				<ol class="breadcrumb">
+                                <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+                                <li class="pull-right">
+                                    <div id="reportrange" class="btn btn-green btn-square date-picker">
+                                        <i class="fa fa-calendar"></i>
+                                        <span class="date-range">May 20, 2014 - June 18, 2014</span> <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </li>
+                </ol>
+				<div class="alert alert-success alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					Welcome to FS.TV. Stroll through your Television analytics on Facebook
+				</div>
+			</div>
+			</div><!-- /.row -->
+			<div class="row">
+				<div class="nav nav-pills">
+				<div class="col-lg-3">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-6">
+									<i class="fa fa-list fa-5x"></i>
+								</div>
+								<div class="col-xs-6 text-right">
+									<p class="announcement-heading">94</p>
+									<p class="announcement-text">Programs</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3" ng-class="{active: selectedTab == 2}">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-6">
+									<i class="fa fa-comments fa-5x"></i>
+								</div>
+								<div class="col-xs-6 text-right">
+									<p class="announcement-heading">1473</p>
+									<p class="announcement-text">Posts</p>
+								</div>
+							</div>
+						</div>
+						<a ng-click="selectedTab = 2;">
+						<div class="panel-footer announcement-bottom">
+								<div class="row">
+										<div class="col-xs-6">
+												View Activity Graph
+										</div>
+										<div class="col-xs-6 text-right">
+												<i class="fa fa-arrow-circle-right"></i>
+										</div>
+								</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3" ng-class="{active: selectedTab == 3}">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-6">
+									<i class="fa fa-tree fa-5x"></i>
+								</div>
+								<div class="col-xs-6 text-right">
+									<p class="announcement-heading">14.2</p>
+									<p class="announcement-text">Engagement</p>
+								</div>
+							</div>
+						</div>
+						<a ng-click="selectedTab = 3;">
+						<div class="panel-footer announcement-bottom">
+								<div class="row">
+										<div class="col-xs-6">
+												View Activity Graph
+										</div>
+										<div class="col-xs-6 text-right">
+												<i class="fa fa-arrow-circle-right"></i>
+										</div>
+								</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3" ng-class="{active: selectedTab == 4}">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-6">
+									<i class="fa fa-child fa-5x"></i>
+								</div>
+								<div class="col-xs-6 text-right">
+									<p class="announcement-heading">1.4</p>
+									<p class="announcement-text">Fans</p>
+								</div>
+							</div>
+						</div>
+						<a ng-click="selectedTab = 4;">
+						<div class="panel-footer announcement-bottom">
+								<div class="row">
+										<div class="col-xs-6">
+												View Activity Graph
+										</div>
+										<div class="col-xs-6 text-right">
+												<i class="fa fa-arrow-circle-right"></i>
+										</div>
+								</div>
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			</div><!-- /.row -->
+			<div>
+				
+				<div class="row tab-content" ng-show="selectedTab == 2" id="poststab">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Posts Activity</h3>
+							</div>
+							<div class="panel-body">
+							<fanschart xkey="xkey" ykeys="ykeys" labels="labels" data="postsdata"></fanschart>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row tab-content" ng-show="selectedTab == 3" id="enggtab">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Engagement Activity</h3>
+							</div>
+							<div class="panel-body">
+							<fanschart xkey="xkey" ykeys="ykeys" labels="labels" data="engagementdata"></fanschart>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row tab-content" ng-show="selectedTab == 4" id="fanstab">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Fans Activity</h3>
+							</div>
+							<div class="panel-body">
+							<fanschart xkey="xkey" ykeys="ykeys" labels="labels" data="fansdata"></fanschart>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="table-responsive">
+							<table class="table table-hover table-striped tablesorter">
+								<thead>
+									<tr>
+										<th class="header"></i></th>
+										<th class="header headerSortUp">RANK <i class="fa fa-sort"></i></th>
+										<th class="header">NETWORK <i class="fa fa-sort"></i></th>
+										<th class="header">PROGRAM <i class="fa fa-sort"></i></th>
+										<th class="header">POSTS <i class="fa fa-sort"></i></th>
+										<th class="header">ENG/SHR <i class="fa fa-sort"></i></th>
+										<th class="header">IMPS/SHR <i class="fa fa-sort"></i></th>
+										<th class="header">FANS <i class="fa fa-sort"></i></th>
+									</tr>
+								</thead>
+								
+								<tbody>
+									<tr ng-repeat="show in shows">
+										<td><img src="/images/shows/{{show.meta.title | slug}}.jpg" height="148" width="128"></td>
+										<td>{{show.rank}}</td>
+										<td><a href="/networks/{{show.meta.network}}">{{show.meta.network}}</a></td>
+										<td><a href="/shows/{{show.meta.title | slug}}">{{show.meta.title}}</td>
+										<td>{{show.metrics.posts}}</td>
+										<td>{{show.metrics.engagement}}</td>
+										<td><i class="fa fa-lock fa-lg"></i> </td>
+										<td>{{show.metrics.fans}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				</div><!-- /.row -->
+				</div><!-- /#page-wrapper -->
+				</div><!-- /#wrapper -->

@@ -1,0 +1,35 @@
+<div class="tabbable tabs-below">
+  <ul class="nav nav-pills">
+    <li ng-class="{active: selectedTab == 1}">
+      <a ng-click="selectedTab = 1;">Personal</a>
+    </li>
+    <li ng-class="{active: selectedTab == 2}">
+      <a  ng-click="selectedTab = 2;">Education</a>
+    </li>
+    <li ng-class="{active: selectedTab == 3}">
+      <a  ng-click="selectedTab = 3;">Contact</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" ng-show="selectedTab == 1">
+    1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  
+  <div class="tab-content" ng-show="selectedTab == 2">
+    2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  
+  <div class="tab-content" ng-show="selectedTab == 3">
+   hello you stupid person.
+  </div>
+</div>
