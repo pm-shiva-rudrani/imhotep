@@ -16,6 +16,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/networks.html',
 			controller: 'NetworksDetailsController'
 		})
+		.when('/networks/category/:network', {
+			templateUrl: 'views/networks.html',
+			controller: 'NetworksListController'
+		})
 		.when('/shows/',{
 			templateUrl: 'views/shows.html',
 			controller: 'ShowsController'
