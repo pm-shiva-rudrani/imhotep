@@ -179,10 +179,10 @@
                 
                 <tbody>
                   <tr ng-repeat="network in networks">
-                    <td><img src="/images/logo/{{show.meta.title | slug}}.png" height="160" width="160"></td>
+                    <td><img src="/images/logo/{{network.meta.title | slug}}.png" height="160" width="160"></td>
                     <td>{{$index + 1}}</td>
-                    <td><a href="/networks/{{show.meta.title}}">{{network.meta.title}}</a></td>
-                    <td><a href="/shows/{{show.meta.title | slug}}">6</td>
+                    <td><a href="/networks/{{network.meta.title}}">{{network.meta.title}}</a></td>
+                    <td><a href="/shows/{{network.meta.title | slug}}">6</td>
                     <td>{{network.metrics.posts}}</td>
                     <td>{{network.metrics.engagement}}</td>
                     <td><i class="fa fa-lock fa-lg"></i> </td>
