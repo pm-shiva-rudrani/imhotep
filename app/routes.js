@@ -10,7 +10,6 @@ module.exports = function(app) {
 		Shows.find(query).sort('rank').exec(function(err, shows) {
 			if (err)
 				res.send(err)
-
 			res.json(shows); // return all todos in JSON format
 		});
 	});
@@ -21,7 +20,6 @@ module.exports = function(app) {
 		Networks.find(query).sort('rank').exec(function(err, networks) {
 			if (err)
 				res.send(err)
-
 			res.json(networks); // return all todos in JSON format
 		});
 	});

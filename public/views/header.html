@@ -12,17 +12,44 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-          <li class="active"><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-          <li><a href="/shows"><i class="fa fa-table"></i> Programs</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Networks <b class="caret"></b></a>
+          <li id="reportrange" class="btn btn-green btn-square date-picker">
+              <i class="fa fa-calendar"></i>
+              <span class="date-range">May 20, 2014 - June 18, 2014</span> <i class="fa fa-caret-down"></i>
+          </li>
+          <li class="active dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Total TV <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="/networks/">All</a></li>
+              <li><a href="/networks/category/cable">Total TV</a></li>
               <li><a href="/networks/category/cable">Cable</a></li>
               <li><a href="/networks/category/broadcast">Broadcast</a></li>
             </ul>
           </li>
+          <!-- <li><a href="/shows"><i class="fa fa-table"></i> Programs</a></li> -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Programs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/networks/category/cable">Networks</a></li>
+              <li><a href="/networks/category/broadcast">Programs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> All Genres <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/networks/category/cable">All Genres</a></li>
+              <li><a href="/networks/category/broadcast">Drama</a></li>
+              <li><a href="/networks/category/broadcast">Reality</a></li>
+              <li><a href="/networks/category/broadcast">Comedy</a></li>
+              <li><a href="/networks/category/broadcast">Events</a></li>
+            </ul>
+          </li>
+         
         </ul>
+        <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
         <ul class="nav navbar-nav navbar-right navbar-user">
 <!--           <li class="dropdown messages-dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>

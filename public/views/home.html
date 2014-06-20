@@ -6,12 +6,7 @@
 				<h1><small>Welcome David Ho !</small></h1>
 				<ol class="breadcrumb">
                                 <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
-                                <li class="pull-right">
-                                    <div id="reportrange" class="btn btn-green btn-square date-picker">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="date-range">May 20, 2014 - June 18, 2014</span> <i class="fa fa-caret-down"></i>
-                                    </div>
-                                </li>
+                                
                 </ol>
 				<div class="alert alert-success alert-dismissable">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -164,11 +159,11 @@
 							<table class="table table-hover table-striped tablesorter">
 								<thead>
 									<tr>
-										<th class="header"></i></th>
-										<th class="header headerSortUp">RANK <i class="fa fa-sort"></i></th>
+										<th></i></th>
+										<th class="">RANK </th>
 										<th class="header">NETWORK <i class="fa fa-sort"></i></th>
 										<th class="header">PROGRAM <i class="fa fa-sort"></i></th>
-										<th class="header">POSTS <i class="fa fa-sort"></i></th>
+										<th class="header headerSortUp">POSTS <i class="fa fa-sort"></i></th>
 										<th class="header">ENG/SHR <i class="fa fa-sort"></i></th>
 										<th class="header">IMPS/SHR <i class="fa fa-sort"></i></th>
 										<th class="header">FANS <i class="fa fa-sort"></i></th>
@@ -177,8 +172,8 @@
 								
 								<tbody>
 									<tr ng-repeat="show in shows">
-										<td><img src="/images/logo/{{show.meta.title | slug}}.png" height="160" width="160"></td>
-										<td>{{show.rank}}</td>
+										<td><img src="/images/logo/{{show.meta.title | slug}}.png" height="128" width="128"></td>
+										<td>{{$index + 1}}</td>
 										<td><a href="/networks/{{show.meta.network}}">{{show.meta.network}}</a></td>
 										<td><a href="/shows/{{show.meta.title | slug}}">{{show.meta.title}}</td>
 										<td>{{show.metrics.posts}}</td>

@@ -38,6 +38,14 @@ a:focus {
     color: #34495e;
 }
 
+table.tablesorter thead {
+  cursor: pointer;
+}
+
+table.tablesorter thead tr th:hover {
+  background-color: #f5f5f5;
+}
+
 @media(min-width:768px) {
     body {
         background: #34495e;
@@ -158,6 +166,10 @@ a:focus {
     background-color: #ecf0f1;
 }
 
+#reportrange {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
 @media(min-width:768px) {
     #page-wrapper {
         margin: 50px 0 0 50px;

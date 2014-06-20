@@ -8,12 +8,6 @@
                                 <li class="active"><i class="fa fa-dashboard"></i> <a href="/">Dashboard</a></li>
                                 <li class="active"><a href="/networks">Networks</a></li>
                                 <li class="active">{{category}}</li>
-                                <li class="pull-right">
-                                    <div id="reportrange" class="btn btn-green btn-square date-picker">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="date-range">May 20, 2014 - June 18, 2014</span> <i class="fa fa-caret-down"></i>
-                                    </div>
-                                </li>
                 </ol>
         <div class="alert alert-success alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -179,7 +173,7 @@
                 
                 <tbody>
                   <tr ng-repeat="network in networks">
-                    <td><img src="/images/logo/{{network.meta.title | slug}}.png" height="160" width="160"></td>
+                    <td><img src="/images/logo/{{network.meta.title | slug}}.png" height="128" width="128"></td>
                     <td>{{$index + 1}}</td>
                     <td><a href="/networks/{{network.meta.title}}">{{network.meta.title}}</a></td>
                     <td><a href="/shows/{{network.meta.title | slug}}">6</td>
